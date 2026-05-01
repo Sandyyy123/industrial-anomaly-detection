@@ -1,0 +1,36 @@
+{
+  "project": "07_industrial_anomaly",
+  "task": "image-level anomaly detection",
+  "backbone": "resnet18 IMAGENET1K_V1 (frozen)",
+  "categories": [
+    "bottle",
+    "cable",
+    "capsule"
+  ],
+  "per_category": {
+    "bottle": {
+      "n_train_good": 209,
+      "n_test_good": 20,
+      "n_test_defect": 63,
+      "baseline_mean_distance_auroc": 0.9880952380952381,
+      "padim_lite_auroc": 0.9857142857142858
+    },
+    "cable": {
+      "n_train_good": 224,
+      "n_test_good": 58,
+      "n_test_defect": 92,
+      "baseline_mean_distance_auroc": 0.7464392803598201,
+      "padim_lite_auroc": 0.6808470764617691
+    },
+    "capsule": {
+      "n_train_good": 219,
+      "n_test_good": 23,
+      "n_test_defect": 109,
+      "baseline_mean_distance_auroc": 0.6908655763861189,
+      "padim_lite_auroc": 0.884323893099322
+    }
+  },
+  "mean_baseline_auroc": 0.8084666982803924,
+  "mean_padim_lite_auroc": 0.8502950850917923,
+  "notes": "PaDiM-lite uses diagonal covariance with 100 randomly subsampled channels from layer1+layer2+layer3 aligned at 28x28. Full multivariate PaDiM (per-pixel Mahalanobis) reserved for future runs."
+}
