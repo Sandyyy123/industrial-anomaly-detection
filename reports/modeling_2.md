@@ -48,4 +48,4 @@ Switching to full PaDiM (multivariate covariance per pixel, WideResNet50 backbon
 
 - `deliverables/metrics.json` - per-category AUROC for both baseline and PaDiM-lite, plus the mean.
 - `deliverables/anomaly_features.npz` - per-image features (bottle, illustrative).
-- Working extraction at `/root/AI/.tmp/mvtec_work/`.
+- Working extraction at `[local temp dir]
