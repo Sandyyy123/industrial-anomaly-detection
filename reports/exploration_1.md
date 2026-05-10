@@ -1,6 +1,6 @@
 # Exploration #1 - Industrial Anomaly Detection Datasets
 
-Project: Liora #7, Anomaly Detection in Industrial Components.
+
 Brief difficulty: 10/10. Cursus: DS.
 
 This first exploration covers the two image-anomaly benchmarks supplied with the brief: **MVTec AD** and **VisA**. Together they are 6.8 GB on disk and were inspected without extraction, by streaming archive members through Python `tarfile` and PIL.

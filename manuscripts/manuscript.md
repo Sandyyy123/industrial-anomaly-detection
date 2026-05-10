@@ -1,6 +1,6 @@
 # Industrial visual anomaly detection on MVTec AD: a measured comparison of a mean-feature baseline and a PaDiM-lite per-pixel Gaussian on a frozen ResNet18 backbone
 
-*Liora Project #7, Data Science cursus. Status: full ML results paper with measured AUROCs on three MVTec AD categories.*
+*Portfolio Project #7, Data Science cursus. Status: full ML results paper with measured AUROCs on three MVTec AD categories.*
 
 ## Abstract
 
@@ -18,7 +18,7 @@ The present paper is a measured contribution rather than a new method. We benchm
 
 ## 2. Data
 
-We work with the MVTec Anomaly Detection archive (`data/mvtec_anomaly_detection.tar.xz`, 5.0 GB compressed), opened with Python `tarfile.open('r:xz')` and streamed through `extractfile()` directly into PIL. EDA therefore requires no on-disk expansion of the full archive, which matters in environments where the working volume is shared with other Liora projects. Only the chosen three categories' `train/good/` and `test/{good, defect_*}/` PNG members are extracted to a working directory. The pixel-level `ground_truth/` mask members are skipped because we report image-level AUROC only.
+We work with the MVTec Anomaly Detection archive (`data/mvtec_anomaly_detection.tar.xz`, 5.0 GB compressed), opened with Python `tarfile.open('r:xz')` and streamed through `extractfile()` directly into PIL. EDA therefore requires no on-disk expansion of the full archive, which matters in environments where the working volume is shared with other Portfolio projects. Only the chosen three categories' `train/good/` and `test/{good, defect_*}/` PNG members are extracted to a working directory. The pixel-level `ground_truth/` mask members are skipped because we report image-level AUROC only.
 
 MVTec AD [1, 2] contains 15 categories split into two families. The 10 object categories are `bottle`, `cable`, `capsule`, `hazelnut`, `metal_nut`, `pill`, `screw`, `toothbrush`, `transistor`, and `zipper`. The 5 texture categories are `carpet`, `grid`, `leather`, `tile`, and `wood`. Each category follows a fixed directory layout with `train/good/*.png` (defect-free training images), `test/good/*.png` plus `test/<defect_type>/*.png` (test images by defect type), and `ground_truth/<defect_type>/*_mask.png` (pixel-level binary masks). The overall distribution is approximately 3,629 training images (all good) and 1,725 test images split roughly 467 good and 1,258 defective. Most images are 1024x1024 RGB PNG, with a few textures at 700 to 840 pixels.
 
