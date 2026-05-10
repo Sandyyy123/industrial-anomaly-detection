@@ -57,4 +57,4 @@ These limitations motivate the per-pixel multivariate-Gaussian variant in `model
 
 - `deliverables/metrics.json` - per-category AUROC for both methods plus the mean.
 - `deliverables/anomaly_features.npz` - example per-image GAP features (bottle category).
-- Streaming-extracted MVTec category data lives at `/root/AI/.tmp/mvtec_work/{bottle,cable,capsule}/` (regenerable from the tar.xz archive).
+- Streaming-extracted MVTec category data lives at `[local temp dir] (regenerable from the tar.xz archive).
